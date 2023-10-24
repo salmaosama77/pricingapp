@@ -1,0 +1,45 @@
+.homepage {
+    /* background-image: url('your-background-image.jpg'); */
+    background-size: cover;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    background:#e1eefc;
+    background: linear-gradient(to bottom, #e1eefc, #8993b7);
+    padding: 20px;
+    width: 70%;
+    height: 50%;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .p{
+    color: #29386c;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  .h{
+    margin-top: 50px;
+    color: #29386c;
+    font-size: 170%;
+    font-weight: bold;
+  }
+
+  .submit {
+    margin-top: 60px; 
+    width: 40%;
+    /* background-color: #4559a1; */
+   background-color: #29386c; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    font-size: medium;
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
