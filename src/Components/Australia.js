@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Australia.css';
-import Afghanistan from './Afghanistan';
 
 const Australia = () => {
   const [selectedNetwork, setSelectedNetwork] = useState(null);

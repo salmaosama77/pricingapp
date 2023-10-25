@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Austria.css';
 
-const Afghanistan = () => {
+const Austria = () => {
   const [selectedNetwork, setSelectedNetwork] = useState(null);
 
   const networkOptions = [

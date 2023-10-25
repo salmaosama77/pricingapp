@@ -17,7 +17,6 @@ import Aruba from './Aruba';
 import Australia from './Australia';
 import Austria from './Austria';
 
-
 const countryOptions = [
   { value: 'afghanistan', label: 'Afghanistan' },
   { value: 'aland-islands', label: 'Aland Islands' },
@@ -149,12 +148,13 @@ const HomePage = () => {
       {selectedCountry && selectedCountry.value === 'aruba' && (
         <Aruba /> 
       )}
-        {selectedCountry && selectedCountry.value === 'australia' && (
+      {selectedCountry && selectedCountry.value === 'australia' && (
         <Australia /> 
       )}
       {selectedCountry && selectedCountry.value === 'austria' && (
         <Austria /> 
       )}
+      
   
     </div>
   );
