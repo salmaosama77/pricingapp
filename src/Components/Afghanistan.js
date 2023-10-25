@@ -1,90 +1,3 @@
-// import React from 'react';
-// import './Afghanistan.css'; // Make sure you have your CSS file
-
-// const Afghanistan = () => {
-//   return (
-//     <div className="afghanistan-page">
-//       {/* <h1 className='head'>Afghanistan</h1> */}
-//       {/* First Table */}
-//       <table className="afghanistan-table">
-//         <tbody>
-//           <tr className="blue-background">
-//             <td colSpan="6">Afghanistan</td>
-//           </tr>
-//           <tr className="orange-background">
-//             <td>Network</td>
-//             <td>VPMN</td>
-//             <td>IMSI</td>
-//             <td>Data Cost/MB</td>
-//             <td>2G/3G</td>
-//             <td>LTE</td>
-//           </tr>
-//           <tr>
-//             <td>MTN Afghanistan</td>
-//             <td>AFGAR</td>
-//             <td>8</td>
-//             <td>$0.01650</td>
-//             <td>2G only</td>
-//             <td>No LTE</td>
-//           </tr>
-//         </tbody>
-//       </table>
-//       {/* Second Table */}
-//       <table className="afghanistan-table">
-//         <tbody>
-//           <tr className="blue-background">
-//             <td colSpan="6">Afghanistan</td>
-//           </tr>
-//           <tr className="orange-background">
-//             <td>Network</td>
-//             <td>VPMN</td>
-//             <td>IMSI</td>
-//             <td>Data Cost/MB</td>
-//             <td>2G/3G</td>
-//             <td>LTE</td>
-//           </tr>
-//           <tr>
-//             <td>Roshan</td>
-//             <td>AFGTD</td>
-//             <td>8</td>
-//             <td>$0.20724</td>
-//             <td>2G only</td>
-//             <td>LTE</td>
-//           </tr>
-//         </tbody>
-//       </table>
-
-//       {/* Third Table */}
-//       <table className="afghanistan-table">
-//         <tbody>
-//           <tr className="blue-background">
-//             <td colSpan="6">Afghanistan</td>
-//           </tr>
-//           <tr className="orange-background">
-//             <td>Network</td>
-//             <td>VPMN</td>
-//             <td>IMSI</td>
-//             <td>Data Cost/MB</td>
-//             <td>2G/3G</td>
-//             <td>LTE</td>
-//           </tr>
-//           <tr>
-//             <td>Afghan Wireless Communication</td>
-//             <td>AFGAW</td>
-//             <td>8</td>
-//             <td>$0.38797</td>
-//             <td>2G & 3G</td>
-//             <td>LTE</td>
-//           </tr>
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
-
-// export default Afghanistan;
-
-
 import React, { useState } from 'react';
 import './Afghanistan.css';
 import AlandIslands from './AlandIslands';
@@ -93,9 +6,9 @@ const Afghanistan = () => {
   const [selectedNetwork, setSelectedNetwork] = useState(null);
 
   const networkOptions = [
-    { value: 'AFGAR', label: 'MTN Afghanistan' },
-    { value: 'AFGTD', label: 'Roshan' },
-    { value: 'AFGAW', label: 'Afghan Wireless Communication' },
+    { value: 'AFGAR', label: 'MTN Afghanistan', dataCost: '$0.01650', networkType: '2G only', LTE: 'No LTE' },
+    { value: 'AFGTD', label: 'Roshan', dataCost: '$0.20724', networkType: '2G only', LTE: 'LTE' },
+    { value: 'AFGAW', label: 'Afghan Wireless Communication', dataCost: '$0.38797', networkType: '2G & 3G', LTE: 'LTE' },
   ];
 
   const handleNetworkClick = (network) => {
@@ -127,9 +40,9 @@ const Afghanistan = () => {
               </td>
               <td>{network.value}</td>
               <td>8</td>
-              <td>{network.value === 'AFGAR' ? '$0.01650' : '$0.20724'}</td>
-              <td>{network.value === 'AFGAR' ? '2G only' : '2G & 3G'}</td>
-              <td>{network.value === 'AFGAR' ? 'No LTE' : 'LTE'}</td>
+              <td>{network.dataCost}</td>
+              <td>{network.networkType}</td>
+              <td>{network.LTE}</td>
             </tr>
           ))}
         </tbody>

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Albania.css';
+import Afghanistan from './Afghanistan';
 
 const Albania = () => {
   const [selectedNetwork, setSelectedNetwork] = useState(null);
 
   const networkOptions = [
-    { value: 'ALBVF', label: 'Albania-Vodafone' },
-    { value: 'ALBAM', label: 'Albania-One' },
+    { value: 'ALBVF', label: 'Albania-Vodafone', dataCost: '$0.00297', networkType: '2G & 3G', LTE: 'LTE' },
+    { value: 'ALBAM', label: 'Albania-One', dataCost: '$0.17864', networkType: '2G & 3G', LTE: 'in process' },
   ];
 
   const handleNetworkClick = (network) => {
@@ -38,16 +39,16 @@ const Albania = () => {
               </td>
               <td>{network.value}</td>
               <td>5</td>
-              <td>{network.value === 'ALBVF' ? '$0.00297' : '$0.17864'}</td>
-              <td>{network.value === 'ALBAM' ? '2G & 3G' : '2G & 3G'}</td>
-              <td>{network.value === 'ALBVF' ? 'LTE' : 'in process'}</td>
+              <td>{network.dataCost}</td>
+              <td>{network.networkType}</td>
+              <td>{network.LTE}</td>
             </tr>
           ))}
         </tbody>
       </table>
-      {/* {selectedNetwork && (
-        <AlandIslands network={selectedNetwork} />
-      )} */}
+      {selectedNetwork && (
+        <Afghanistan network={selectedNetwork} />
+      )}
     </div>
   );
 };

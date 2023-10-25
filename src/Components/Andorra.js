@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import './Andorra.css'; 
+import './Andorra.css';
+import Afghanistan from './Afghanistan';
 
 const Andorra = () => {
   const [selectedNetwork, setSelectedNetwork] = useState(null);
 
   const networkOptions = [
-    { value: 'ANDMA', label: 'Mobiland (d. STA)' },
+    { value: 'ANDMA', label: 'Mobiland (d. STA)', dataCost: '$0.02035', networkType: '2G & 3G', LTE: 'No LTE' },
   ];
 
   const handleNetworkClick = (network) => {
@@ -37,16 +38,16 @@ const Andorra = () => {
               </td>
               <td>{network.value}</td>
               <td>9</td>
-              <td>$0.02035</td>
-              <td>2G & 3G</td>
-              <td>No LTE</td>
+              <td>{network.dataCost}</td>
+              <td>{network.networkType}</td>
+              <td>{network.LTE}</td>
             </tr>
           ))}
         </tbody>
       </table>
-      {/* {selectedNetwork && (
+      {selectedNetwork && (
         <Afghanistan network={selectedNetwork} />
-      )} */}
+      )}
     </div>
   );
 };
