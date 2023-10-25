@@ -14,6 +14,8 @@ import AntiguaAndBarbuda from './AntiguaAndBarbuda';
 import Argentina from './Argentina';
 import Armenia from './Armenia';
 import Aruba from './Aruba';
+import Australia from './Australia';
+import Austria from './Austria';
 
 
 const countryOptions = [
@@ -90,6 +92,12 @@ const HomePage = () => {
     if (selectedCountry && selectedCountry.value === 'aruba') {
       return;
     }
+    if (selectedCountry && selectedCountry.value === 'australia') {
+      return;
+    }
+    if (selectedCountry && selectedCountry.value === 'austria') {
+      return;
+    }
   };
 
   return (
@@ -140,6 +148,12 @@ const HomePage = () => {
       )}
       {selectedCountry && selectedCountry.value === 'aruba' && (
         <Aruba /> 
+      )}
+        {selectedCountry && selectedCountry.value === 'australia' && (
+        <Australia /> 
+      )}
+      {selectedCountry && selectedCountry.value === 'austria' && (
+        <Austria /> 
       )}
   
     </div>
